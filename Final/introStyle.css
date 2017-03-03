@@ -1,0 +1,17 @@
+body{
+	background-color: lavender;
+}
+h1{
+	font-size: 7vw;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	text-align:center;
+	text-decoration: underline;
+	padding-top:5%;
+	padding-left:10%;
+	padding-right:10%;
+}
+.link{
+	font-size: 4vw;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	text-align:center;
+}

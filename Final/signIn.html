@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Sign-In Verification</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="signIn.css">
+	<label>Please enter a password to access the sign-in log.</label><br>
+	<label>Only TWIST officers are to use this option.</label><br>
+	<h2>Password:</h2><br>
+	<input type="password"name="password" id="password"><br>
+	<button type="submit" onclick="checkPassword()">Submit</button><br>
+	
+	<script type="text/javascript">
+		function checkPassword(){
+			if(document.getElementById("password").value=="password"){
+				window.location="signLog.html";
+			}
+			else{
+				alert("Wrong Password");
+				window.location="introPage.html";
+			}
+		}
+	</script>
+</body>
+</html>

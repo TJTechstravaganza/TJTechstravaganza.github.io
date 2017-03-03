@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Sign Log</title>
+	<link rel="stylesheet" type="text/css" href="logStyle.css">
+</head>
+<body>
+<form action="signTableLog.php" method="post">
+	<div class="formBody">
+	<h1>Sign In & Out Form</h1>
+	<label>First Name:</label><br>
+	<input type="text" class="textfield" name="fname" id="fname" required><br>
+
+	<label>Last Name:</label><br>
+	<input type="text" class="textfield" name="lname" id="lname" required><br>
+
+	<label>Grade:</label><br>
+		<select id="grade" name="grade" size=1>
+			<option value="9">Freshman</option><br>
+			<option value="10">Sophomore</option><br>
+			<option value="11">Junior</option><br>
+			<option value="12">Senior</option><br>
+		</select><br>
+	<label>Sign In or Out</label><br>
+		<input type="radio" name="sign" name="sign" id="sign" value="in" checked><label class="radioLabel">Sign In </label><br>
+		<input type="radio" name="sign" name="sign" id="sign" value="out"><label class="radioLabel">Sign Out</label><br>
+
+	<label>Reason for Volunteering:</label><br>
+		<input type="radio" name="volunteer" name="volunteer" id="volunteer" value="none" checked><label class="radioLabel">Out of the Kindness of my Heart </label><br>
+		<input type="radio" name="volunteer" name="volunteer" id="volunteer" value="hchemistry"><label class="radioLabel">Taylor Honors Chemistry Extra Credit</label><br>
+		<input type="radio" name="volunteer" name="volunteer" id="volunteer" value="apchemistry"><label class="radioLabel">Taylor AP Chemistry Extra Credit</label><br>
+		<input type="radio" name="volunteer" name="volunteer" id="volunteer" value="NHS"><label class="radioLabel">NHS hours</label><br>
+		<input type="radio" name="volunteer" name="volunteer" id="volunteer" value="genhours"><label class="radioLabel">General Community Service Hours</label><br>
+
+	<button type="submit" onclick="timeMaker()">Submit</button>
+	<div class="invisible" name="time" id="time" value=""></label>
+	</div>
+	<script type="text/javascript">
+		function timeMaker(){
+			var d= new Date();
+			var str=d.toString();
+			str=str.slice(16,24);
+			document.getElementById("time").value=""+str;
+			alert(str);
+		}
+	</script>
+</form>
+</body>
+</html>
